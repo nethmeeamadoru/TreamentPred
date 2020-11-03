@@ -1,0 +1,607 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8"></div>
+
+<div class="container-fluid mt--7">
+    <div class="row">
+        <div class="col-xl-10 mx-auto">
+            <div class="card bg-secondary shadow">
+                <div class="card-header bg-white border-0">
+                    <div class="row align-items-center">
+                        <div class="col-8">
+                            <h3 class="mb-0">Patient Record Details</h3>
+                        </div>
+                        <div class="col-4 text-right">
+                            <!-- <a href="#!" class="btn btn-sm btn-primary">Edit</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <h6 class="heading-small text-muted mb-4">Patient Information</h6>
+                        <div class="pl-lg-4">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">Patient Name</label>
+                                        <input type="text" id="input-name" class="form-control form-control-alternative"
+                                            placeholder="Enter Name" [(ngModel)]="treatment.name"
+                                            [ngModelOptions]="{standalone: true}">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">Age</label>
+                                        <input type="text" id="input-age" class="form-control form-control-alternative"
+                                            placeholder="Enter Age" [(ngModel)]="treatment.age"
+                                            [ngModelOptions]="{standalone: true}">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-last-name">Gender</label>
+                                        <select class="form-control" id="exampleFormControlSelect1"
+                                            [(ngModel)]="treatment.gender" [ngModelOptions]="{standalone: true}">
+                                            <option value="1">Female</option>
+                                            <option value="0">Male</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </form>
+                    <hr class="my-4" />
+                </div>
+
+                <div class="ml-4">
+                    <form>
+                        <h6 class="heading-small text-muted mb-4">Dental Hygiene Information</h6>
+                        <div class="pl-lg-4">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-last-name">Brushing Teeth Twice a
+                                            Day</label>
+                                        <div class="form-check row mx-2">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions1"
+                                                id="inlineRadio1" value="1" [(ngModel)]="treatment.brushingTeeth" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label mr-4 pr-4" for="inlineRadio1">Yes</label>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions1"
+                                                id="inlineRadio1" value="0" [(ngModel)]="treatment.brushingTeeth" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label" for="inlineRadio1">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-last-name">Daily Flossing</label>
+                                        <div class="form-check row mx-2">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions2"
+                                                id="inlineRadio2" value="1" [(ngModel)]="treatment.dailyFlossing" [ngModelOptions]="{standalone: true}">                                                
+                                            <label class="form-check-label mr-4 pr-4" for="inlineRadio2">Yes</label>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions2"
+                                                id="inlineRadio2" value="0" [(ngModel)]="treatment.dailyFlossing" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label" for="inlineRadio2">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-last-name">Betel Chewing
+                                            Habits</label>
+                                        <div class="form-check row mx-2">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions3"
+                                                id="inlineRadio3" value="1" [(ngModel)]="treatment.betelChewing" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label mr-4 pr-4" for="inlineRadio3">Yes</label>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions3"
+                                                id="inlineRadio3" value="0" [(ngModel)]="treatment.betelChewing" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label" for="inlineRadio3">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 mt-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-last-name">Betel Chewing with
+                                            Tobaco</label>
+                                        <div class="form-check row mx-2">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions4"
+                                                id="inlineRadio4" value="1" [(ngModel)]="treatment.betelWithTobacco" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label mr-4 pr-4" for="inlineRadio4">Yes</label>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions4"
+                                                id="inlineRadio4" value="0" [(ngModel)]="treatment.betelWithTobacco" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label" for="inlineRadio4">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 mt-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-last-name">Alcohol
+                                            Consumption</label>
+                                        <div class="form-check row mx-2">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions5"
+                                                id="inlineRadio5" value="1" [(ngModel)]="treatment.alcoholConsumption" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label mr-4 pr-4" for="inlineRadio5">Yes</label>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions5"
+                                                id="inlineRadio5" value="0" [(ngModel)]="treatment.alcoholConsumption" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label" for="inlineRadio5">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 mt-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-last-name">Smoking
+                                            Habits</label>
+                                        <div class="form-check row mx-2">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions6"
+                                                id="inlineRadio6" value="1" [(ngModel)]="treatment.smoking" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label mr-4 pr-4" for="inlineRadio1">Yes</label>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions6"
+                                                id="inlineRadio6" value="0" [(ngModel)]="treatment.smoking" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label" for="inlineRadio1">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second Card Starts here -->
+    <div class="row mt-3">
+        <div class="col-xl-10 mx-auto">
+            <div class="card bg-secondary shadow">
+                <div class="card-header bg-white border-0">
+                    <div class="row align-items-center">
+                        <div class="col-8">
+                            <h3 class="mb-0">Complaints and Symptoms Records</h3>
+                        </div>
+                        <div class="col-4 text-right">
+                            <!-- <a href="#!" class="btn btn-sm btn-primary">Edit</a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <form>
+                        <h6 class="heading-small text-muted mb-4">Patient Complaints</h6>
+                        <div class="pl-lg-4">
+                            <div class="row">
+
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-last-name">Carious Teeth</label>
+                                        <div class="form-check row mx-2">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionsc1"
+                                                id="inlineRadioc1" value="1" [(ngModel)]="treatment.cariousTeeth" [ngModelOptions]="{standalone: true}" >
+                                            <label class="form-check-label mr-4 pr-4" for="inlineRadioc1">Yes</label>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionsc1"
+                                                id="inlineRadioc1" value="0" [(ngModel)]="treatment.cariousTeeth" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label" for="inlineRadioc1">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-last-name">Gum Diseases</label>
+                                        <div class="form-check row mx-2">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionsc2"
+                                                id="inlineRadioc2"  value="1" [(ngModel)]="treatment.gumDisease" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label mr-4 pr-4" for="inlineRadioc2">Yes</label>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionsc2"
+                                                id="inlineRadioc2" value="0" [(ngModel)]="treatment.gumDisease" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label" for="inlineRadioc2">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-last-name">Bleeding while
+                                            brushing</label>
+                                        <div class="form-check row mx-2">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionsc3"
+                                                id="inlineRadioc3"  value="1" [(ngModel)]="treatment.bleedingWhileBrushing" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label mr-4 pr-4" for="inlineRadioc3">Yes</label>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionsc3"
+                                                id="inlineRadioc3" value="0" [(ngModel)]="treatment.bleedingWhileBrushing" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label" for="inlineRadioc3">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-last-name">Deposits/Tartar</label>
+                                        <div class="form-check row mx-2">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionsc4"
+                                                id="inlineRadioc4"  value="1" [(ngModel)]="treatment.depositsTartar" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label mr-4 pr-4" for="inlineRadioc4">Yes</label>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionsc4"
+                                                id="inlineRadioc4" value="0" [(ngModel)]="treatment.depositsTartar" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label" for="inlineRadioc4">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 mt-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-last-name">Accidental
+                                            fracture</label>
+                                        <div class="form-check row mx-2">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionsc5"
+                                                id="inlineRadioc5"  value="1" [(ngModel)]="treatment.accidentalFracture" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label mr-4 pr-4" for="inlineRadioc5">Yes</label>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionsc5"
+                                                id="inlineRadioc5" value="0" [(ngModel)]="treatment.accidentalFracture" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label" for="inlineRadioc5">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 mt-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-last-name">Missing Teeth</label>
+                                        <div class="form-check row mx-2">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionsc6"
+                                                id="inlineRadioc6"  value="1" [(ngModel)]="treatment.missingTeeth" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label mr-4 pr-4" for="inlineRadioc6">Yes</label>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionsc6"
+                                                id="inlineRadioc6" value="0" [(ngModel)]="treatment.missingTeeth" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label" for="inlineRadioc6">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 mt-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-last-name">Stains on teeth</label>
+                                        <div class="form-check row mx-2">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionsc7"
+                                                id="inlineRadioc7"  value="1" [(ngModel)]="treatment.stainsOnTeeth" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label mr-4 pr-4" for="inlineRadioc7">Yes</label>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionsc7"
+                                                id="inlineRadioc7" value="0" [(ngModel)]="treatment.stainsOnTeeth" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label" for="inlineRadioc7">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 mt-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-last-name">Malaligned teeth</label>
+                                        <div class="form-check row mx-2">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionsc8"
+                                                id="inlineRadioc8"  value="1" [(ngModel)]="treatment.malalignedTeeth" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label mr-4 pr-4" for="inlineRadioc8">Yes</label>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionsc8"
+                                                id="inlineRadioc8" value="0" [(ngModel)]="treatment.malalignedTeeth" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label" for="inlineRadioc8">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <hr class="my-4" />
+
+                        <h6 class="heading-small text-muted mb-4">Patient Symptoms</h6>
+                        <div class="pl-lg-4">
+                            <div class="row">
+
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-last-name">Toothache</label>
+                                        <div class="form-check row mx-2">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions1"
+                                                id="inlineRadios1"  value="1" [(ngModel)]="treatment.toothache" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label mr-4 pr-4" for="inlineRadios1">Yes</label>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionss1"
+                                                id="inlineRadios1" value="0" [(ngModel)]="treatment.toothache" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label" for="inlineRadios1">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-last-name">Facial pain</label>
+                                        <div class="form-check row mx-2">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions2"
+                                                id="inlineRadios2" value="1" [(ngModel)]="treatment.facialPain" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label mr-4 pr-4" for="inlineRadios2">Yes</label>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionss2"
+                                                id="inlineRadios2" value="0" [(ngModel)]="treatment.facialPain" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label" for="inlineRadios2">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-last-name">Headache</label>
+                                        <div class="form-check row mx-2">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions3"
+                                                id="inlineRadios3" value="1" [(ngModel)]="treatment.headache" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label mr-4 pr-4" for="inlineRadios3">Yes</label>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionss3"
+                                                id="inlineRadios3" value="0" [(ngModel)]="treatment.headache" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label" for="inlineRadios3">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mt-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-last-name">Night pain</label>
+                                        <div class="form-check row mx-2">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions4"
+                                                id="inlineRadios4" value="1" [(ngModel)]="treatment.nightPain" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label mr-4 pr-4" for="inlineRadios4">Yes</label>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionss4"
+                                                id="inlineRadios4" value="0" [(ngModel)]="treatment.nightPain" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label" for="inlineRadios4">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mt-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-last-name">Pain while
+                                            biting</label>
+                                        <div class="form-check row mx-2">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions5"
+                                                id="inlineRadios5" value="1" [(ngModel)]="treatment.painWhileBiting" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label mr-4 pr-4" for="inlineRadios5">Yes</label>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionss5"
+                                                id="inlineRadios5" value="0" [(ngModel)]="treatment.painWhileBiting" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label" for="inlineRadios5">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mt-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-last-name">Swollen cheek</label>
+                                        <div class="form-check row mx-2">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions6"
+                                                id="inlineRadios6" value="1" [(ngModel)]="treatment.swollenCheek" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label mr-4 pr-4" for="inlineRadios6">Yes</label>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionss6"
+                                                id="inlineRadios6" value="0" [(ngModel)]="treatment.swollenCheek" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label" for="inlineRadios6">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mt-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-last-name">Pain from an
+                                            ulcer</label>
+                                        <div class="form-check row mx-2">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions7"
+                                                id="inlineRadios7" value="1" [(ngModel)]="treatment.painFromAnUlcer" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label mr-4 pr-4" for="inlineRadios7">Yes</label>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionss7"
+                                                id="inlineRadios7" value="0" [(ngModel)]="treatment.painFromAnUlcer" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label" for="inlineRadios7">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mt-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-last-name">Swelling with
+                                            pain</label>
+                                        <div class="form-check row mx-2">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions8"
+                                                id="inlineRadios8" value="1" [(ngModel)]="treatment.swellingWithPain" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label mr-4 pr-4" for="inlineRadios8">Yes</label>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionss8"
+                                                id="inlineRadios8" value="0" [(ngModel)]="treatment.swellingWithPain" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label" for="inlineRadios8">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mt-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-last-name">Swelling without
+                                            pain</label>
+                                        <div class="form-check row mx-2">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions9"
+                                                id="inlineRadios9" value="1" [(ngModel)]="treatment.swellingWithoutPain" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label mr-4 pr-4" for="inlineRadios9">Yes</label>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionss9"
+                                                id="inlineRadios9" value="0" [(ngModel)]="treatment.swellingWithoutPain" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label" for="inlineRadios9">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mt-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-last-name">Clicking sound while
+                                            opening</label>
+                                        <div class="form-check row mx-2">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions10"
+                                                id="inlineRadios10" value="1" [(ngModel)]="treatment.clickingSoundWhileOpening" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label mr-4 pr-4" for="inlineRadios10">Yes</label>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionss10"
+                                                id="inlineRadios10" value="0" [(ngModel)]="treatment.clickingSoundWhileOpening" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label" for="inlineRadios10">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mt-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-last-name">Sensitive to hot
+                                            beverages</label>
+                                        <div class="form-check row mx-2">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions11"
+                                                id="inlineRadios11" value="1" [(ngModel)]="treatment.sensitiveToHotBeverages" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label mr-4 pr-4" for="inlineRadios11">Yes</label>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionss11"
+                                                id="inlineRadios11" value="0" [(ngModel)]="treatment.sensitiveToHotBeverages" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label" for="inlineRadios11">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mt-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-last-name">Sensitive to cold
+                                            beverages</label>
+                                        <div class="form-check row mx-2">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions12"
+                                                id="inlineRadios12" value="1" [(ngModel)]="treatment.sensitiveToColdBeverages" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label mr-4 pr-4" for="inlineRadios12">Yes</label>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionss12"
+                                                id="inlineRadios12" value="0" [(ngModel)]="treatment.sensitiveToColdBeverages" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label" for="inlineRadios12">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row mt-3">
+        <div class="col-xl-10 mx-auto">
+            <div class="card bg-secondary shadow">
+                <div class="card-header bg-white border-0">
+                    <div class="row align-items-center">
+                        <div class="col-8">
+                            <h3 class="mb-0">Dentistry Information</h3>
+                        </div>
+                        <div class="col-4 text-right">
+                            <!-- <a href="#!" class="btn btn-sm btn-primary">Edit</a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <form>
+                        <h6 class="heading-small text-muted mb-4">Upper Jaw Teeth Information</h6>
+                        <div class="pl-lg-4">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-last-name">Decayed</label>
+                                        <div class="form-check row mx-2">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionD1"
+                                                id="inlineRadioD1" value="1" [(ngModel)]="treatment.adultUpperJawDecayed" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label mr-4 pr-4" for="inlineRadio">Yes</label>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionD1"
+                                                id="inlineRadioD1"  value="0" [(ngModel)]="treatment.adultUpperJawDecayed" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label" for="inlineRadioD1">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-last-name">Missing</label>
+                                            <div class="form-check row mx-2">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptionD2"
+                                                    id="inlineRadioD2" value="1" [(ngModel)]="treatment.adultUpperJawMissing" [ngModelOptions]="{standalone: true}">
+                                                <label class="form-check-label mr-4 pr-4" for="inlineRadioD2">Yes</label>
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptionD2"
+                                                    id="inlineRadioD2"  value="0" [(ngModel)]="treatment.adultUpperJawMissing" [ngModelOptions]="{standalone: true}">
+                                                <label class="form-check-label" for="inlineRadioD2">No</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="input-last-name">Filled</label>
+                                                <div class="form-check row mx-2">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptionD3"
+                                                        id="inlineRadioD3" value="1" [(ngModel)]="treatment.adultUpperJawFilled" [ngModelOptions]="{standalone: true}">
+                                                    <label class="form-check-label mr-4 pr-4" for="inlineRadioD3">Yes</label>
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptionD3"
+                                                        id="inlineRadioD3"  value="0" [(ngModel)]="treatment.adultUpperJawFilled" [ngModelOptions]="{standalone: true}">
+                                                    <label class="form-check-label" for="inlineRadioD3">No</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                            </div>
+                        </div>
+
+                        <hr class="my-4" />
+ 
+
+                        <h6 class="heading-small text-muted mb-4">Lower Jaw Teeth Information</h6>
+                        <div class="pl-lg-4">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-last-name">Decayed</label>
+                                        <div class="form-check row mx-2">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionD4"
+                                                id="inlineRadioD4" value="1" [(ngModel)]="treatment.adultLowerJawDecayed" [ngModelOptions]="{standalone: true}">
+                                            <label class="form-check-label mr-4 pr-4" for="inlineRadioD4">Yes</label>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptionD4"
+                                                id="inlineRadioD4" value="0" [(ngModel)]="treatment.adultLowerJawDecayed" [ngModelOptions]="{standalone: true}" >
+                                            <label class="form-check-label" for="inlineRadioD4">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-last-name">Missing</label>
+                                            <div class="form-check row mx-2">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptionD5"
+                                                    id="inlineRadioD5" value="1" [(ngModel)]="treatment.adultLowerJawMissing" [ngModelOptions]="{standalone: true}">
+                                                <label class="form-check-label mr-4 pr-4" for="inlineRadioD5">Yes</label>
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptionD5"
+                                                    id="inlineRadioD5"  value="0" [(ngModel)]="treatment.adultLowerJawMissing" [ngModelOptions]="{standalone: true}">
+                                                <label class="form-check-label" for="inlineRadioD5">No</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="input-last-name">Filled</label>
+                                                <div class="form-check row mx-2">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptionD6"
+                                                        id="inlineRadioD6" value="1" [(ngModel)]="treatment.adultLowerJawFilled" [ngModelOptions]="{standalone: true}">
+                                                    <label class="form-check-label mr-4 pr-4" for="inlineRadioD6">Yes</label>
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptionD6"
+                                                        id="inlineRadioD6"  value="0" [(ngModel)]="treatment.adultLowerJawFilled" [ngModelOptions]="{standalone: true}">
+                                                    <label class="form-check-label" for="inlineRadioD6">No</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <ngx-ui-loader [fgsTemplate]="foregroundSpinner" [bgsTemplate]="backgroundSpinner" fgsSize="100" bgsSize="64"></ngx-ui-loader>
+            <div class = "row mt-5">
+                <div class="col-lg-8">
+                    <div class="form-group">
+                        <input type="text" id="input-id" class="form-control form-control-alternative"
+                            placeholder="Treatment" [(ngModel)]="treatmentPred" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <div class = "col-4">
+                    <button  [disabled]="showSpinner" class="btn btn-primary" (click)="onGetTreatment()">
+                        <span *ngIf="showSpinner" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        Get Treatment</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<!-- <div class="container-fluid mt--7"> -->
+
+<!-- </div> -->
